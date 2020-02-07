@@ -11,6 +11,7 @@ Pseudocode for Blackjack:
 2.Create a deck of cards with JavaScript: let suits = [], values = [], card = {}, deck={}, ).
 Declare constants: card suits and non numeric’s ie; card.clubs , card.hearts, card.diamonds, card.spades. card.king, card.queen, card.jack, card.ace.
 
-3.Create logic/functions in JavaScript for new game, hit, stand, win, lose, switch turns, deck shuffle, message, removeCard once played
-Create and Cache DOM elements: cache players cards, cache used cards, create card images.
+3.Create logic/functions in JavaScript for new game: create newgame(), hit(), stand(), win: if else, lose: if else, switch turns(), deck shuffle: math.random, message: inner , removeCard once played
+
+4.Create and Cache DOM elements: cache players cards, cache used cards, create element card images.
 
