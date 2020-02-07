@@ -2,5 +2,5 @@
 Project 1 Blackjack game
 
 
-![Image Description](./wireframe_blackjack)
+![Image Description](./wireframe_blackjack.jpeg)
 
