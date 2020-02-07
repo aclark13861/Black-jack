@@ -13,5 +13,5 @@ Declare constants: card suits and non numeric’s ie; card.clubs , card.hearts, 
 
 3.Create logic/functions in JavaScript for new game: create newgame(), hit(), stand(), win: if else, lose: if else, switch turns(), deck shuffle: math.random, message: inner , removeCard once played
 
-4.Create and Cache DOM elements: cache players cards, cache used cards, create element card images.
+4.Create and Cache DOM elements: dealers cards, players cards, used cards, card images.
 
