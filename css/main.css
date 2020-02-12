@@ -110,7 +110,7 @@ h1 {
     text-align: center;
     display: inline-table;
 }
-button {
+button, input{
     background-color: black;
     color:white;
     font-size: 30px;
