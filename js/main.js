@@ -166,6 +166,7 @@ function renderDealer() {
 function checkPlayer() {
     if (playerTotal > 21) {
          playersMessage.innerHTML = `<h2>Player Busts</h2>`;
+         dealersMessage.innerHTML = `<h2>Dealer Wins</h2>`;
          let btns = document.querySelectorAll('#hit, .stand');
             btns.forEach(function(btn){
                 btn.disabled = true;
@@ -192,6 +193,7 @@ function checkDealer() {
 function dealerBust() {
     if (dealerTotal > 21) {
     dealersMessage.innerHTML = `<h2>Dealer Busts!</h2>`;
+    playersMessage.innerHTML = `<h2>Player Wins!</h2>`
     }
 };
 
