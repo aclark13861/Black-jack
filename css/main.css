@@ -3,105 +3,36 @@ table {
     padding-left: 2.5vw;
     padding-right: 3.1vw;
     padding-bottom: 3vh;
-    height: 30vh;
+    height: 20vh;
     width: 50vw;
     background-color: #1D7742;
+    margin-left: 22vw;
 }
 
 h1 {
 color: red;
 text-align: center;
 background-color: black;
+margin-left: 22vw;;
 }
 
 #player1 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    margin-left: 0px;
-    height: 15vh;
-    width: 7vw;
-    font-size: 15px;
+    
+    display: inline;
 }
 
 #player2 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
+    display: inline;
 }
-
-#player3 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
-}
-
-#player4 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
-}
-
-#player5 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
-}
-
 #dealer1{
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
-    margin-left: 0px;;
+    display: inline;
 }
-
 #dealer2 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
+    display: inline;
 }
-
-#dealer3 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
-}
-
-#dealer4 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
-}
-
-#dealer5 {
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: row;
-    height: 15vh;
-    width: 7vw;
-}
-
 td {
     text-align: center;
-    
 }
-
 #hands {
     margin-top: 10px;
     padding-top: 3px;
@@ -110,33 +41,42 @@ td {
 
 h1 {
     margin-bottom: 0px;
-    text-align: center;
+    padding: 5px;
     display: inline-table;
 }
-button, input{
+button{
     background-color: black;
     color:white;
     font-size: 30px;
-    margin: 3vh 5px 5vw 0vh;
+    margin: 3vh 1vw 5vw 0vh;
     padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+
+    
 }
 
 footer {
     text-align: center;
     display: inline-block;
-    margin-left: 35vw;;
+    margin-left: 36vw;
 }
-div {
+.pTitle, .title {
     background-color: #A15D4E;
 }
 
-body {
-    background-color: red;
+.bimg {
+    background-color: darkred;
 }
 
 img {
     height: 15vh;
     width: 7vw;
+    
+}
+.card {
+    display: inline;
+    white-space: nowrap;
     
 }
 

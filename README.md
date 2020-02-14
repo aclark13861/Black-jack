@@ -1,17 +1,23 @@
 # Black-jack
-Project 1 Blackjack game
+                            Project 1 Blackjack
 
+Technologies Used: -JavaScript
+                   -HTML
+                   -CSS
 
-![Image Description](./wireframe_blackjack.jpeg)
+Link to game: https://aclark13861.github.io/Black-jack/
 
-Pseudocode for Blackjack:
+                                Getting Started
+    I chose Blackjack based off my father's love for the game.
+Fun fact my father and grandfather once won upwards of 7,000 dollars playing Blackjack over a weekend.
+                                  Instructions
+        The goal of the game is to beat the dealer by getting as close to 21 as you can without going over.  To play simply press hit to get a new card.  When you are satisfied with your cards press stand to see what the dealer has.
 
-1.Create the HTML: (h2 text: dealers hand, h2 text: players hand.  Create blank spaces for cards made from divs, id= “player 1”, “player 2”, up to 5. div id =“dealer 1”, “dealer 2” , up to 5. Make buttons for hit, stand, new game. Make a message div that can be changed with innerhtml).
+                                    Next Steps
+              I would like to incorporate a betting feature, as well as a
+                message that displays the value of the cards in your hand.
 
-2.Create a deck of cards with JavaScript: let suits = [], values = [], card = {}, deck={}, ).
-Declare constants: card suits and non numeric’s ie; card.clubs , card.hearts, card.diamonds, card.spades. card.king, card.queen, card.jack, card.ace.
+Gameplay:
 
-3.Create logic/functions in JavaScript for new game: create newgame(), hit(), stand(), win: if else, lose: if else, switch turns(), deck shuffle: math.random, message: inner , removeCard once played
-
-4.Create and Cache DOM elements: dealers cards, players cards, used cards, card images.
+![Image Description](gameplay.png)
 
