@@ -64,7 +64,10 @@ function createPlayers(num) {
 function initialize() {
     playersHand = [];
     dealersHand = [];
-
+    let btnz = document.querySelectorAll('#hit, .stand');
+            btnz.forEach(function(btn){
+                btn.disabled = false;
+})
     getDeck();
     shuffle();
     createPlayers(2);
@@ -89,6 +92,7 @@ function initialize() {
 
 document.querySelector('#deal').addEventListener('click', function (e) {
     initialize();
+    blackjack();
 });
 
 document.querySelector('#hit').addEventListener('click', function(e) {
@@ -106,15 +110,22 @@ document.querySelector('.stand').addEventListener('click', function(e){
         dealer2.appendChild(front);
         dealer2Img.remove();
       
-      dealerBust();
       renderPlayer();
       renderDealer();
       checkDealer();
-      renderDealer()
-      checkDealer();
+      dealerBust();
       renderDealer();
       checkDealer();
+      dealerBust();
+      renderDealer();
+      checkDealer();
+      dealerBust();
       checkWin();
+      let btns = document.querySelectorAll('#hit, .stand');
+            btns.forEach(function(btn){
+                btn.disabled = true;
+
+    })
 });
 
 function deal(person, num, isPlayer) {
@@ -154,7 +165,7 @@ function renderDealer() {
 function checkPlayer() {
     if (playerTotal > 21) {
          playersMessage.innerHTML = `<h2>Player Busts</h2>`;
-            let btns = document.querySelectorAll('#hit, .stand');
+         let btns = document.querySelectorAll('#hit, .stand');
             btns.forEach(function(btn){
                 btn.disabled = true;
         })
@@ -163,18 +174,10 @@ function checkPlayer() {
 
 function checkWin() {
     if (playerTotal > dealerTotal && playerTotal <= 21) {
-        playersMessage.innerHTML = 'Player Wins!';
-            let btns = document.querySelectorAll('#hit, .stand');
-            btns.forEach(function(btn){
-                btn.disabled = true;
-    })
+        playersMessage.innerHTML = `<h2>Player Wins!</h2>`;
 }
     if (dealerTotal > playerTotal && dealerTotal <= 21) {
         dealersMessage.innerHTML = `<h2>Dealer Wins</h2>`;
-            let btns = document.querySelectorAll('#hit, .stand');
-            btns.forEach(function(btn){
-                btn.disabled = true;
-        })
     }
 };
 
@@ -188,28 +191,16 @@ function checkDealer() {
 function dealerBust() {
     if (dealerTotal > 21) {
     dealersMessage.innerHTML = `<h2>Dealer Busts!</h2>`;
-        let btns = document.querySelectorAll('#hit, .stand');
-            btns.forEach(function(btn){
-            btn.disabled = true;    
-        })
     }
 };
 
 function blackjack() {
-    if (dealerTotal === 21) {
+    if (dealerTotal === 21 && dealersHand.length === 2) {
         dealersMessage.innerHTML = `<h2>BlackJack<h2>`;
-            let btns = document.querySelectorAll('#hit, .stand');
-            btns.forEach(function(btn){
-                btn.disabled = true;
-    })
 }
 
-    if (playerTotal === 21) {
+    if (playerTotal === 21 && playersHand.length === 2) {
         playersMessage.innerHTML = `<h2>You got a BlackJack!</h2>`;
-            let btns = document.querySelectorAll('#hit, .stand');
-            btns.forEach(function(btn){
-                btn.disabled = true;
-        })
     }
 };
     
