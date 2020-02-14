@@ -3,7 +3,7 @@ table {
     padding-left: 2.5vw;
     padding-right: 3.1vw;
     padding-bottom: 3vh;
-    height: 20vh;
+    height: 30vh;
     width: 50vw;
     background-color: #1D7742;
     margin-left: 22vw;
@@ -78,5 +78,9 @@ img {
     display: inline;
     white-space: nowrap;
     
+}
+
+body {
+    background: url(../images/casino-back.jpg);
 }
 

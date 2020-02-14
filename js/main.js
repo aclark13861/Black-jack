@@ -121,6 +121,7 @@ document.querySelector('.stand').addEventListener('click', function(e){
       checkDealer();
       dealerBust();
       checkWin();
+      points();
       let btns = document.querySelectorAll('#hit, .stand');
             btns.forEach(function(btn){
                 btn.disabled = true;
@@ -203,4 +204,18 @@ function blackjack() {
         playersMessage.innerHTML = `<h2>You got a BlackJack!</h2>`;
     }
 };
-    
+function points() {
+    if (dealerTotal > playerTotal || playerTotal > 21){
+        let dpoints = document.querySelector('.dPoints');
+        dpoints.innerHTML = 'Dealer Score: 1';
+            
+    }
+
+        if (playerTotal > dealerTotal || dealerTotal > 21) {
+                let total = 0;
+                total += 1;
+        
+            let pPoints = document.querySelector('.points');
+            pPoints.innerHTML = `Player Score: ${total}`;
+    }
+ }
