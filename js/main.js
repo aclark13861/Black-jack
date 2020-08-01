@@ -92,11 +92,13 @@ function initialize() {
 
 document.querySelector('#deal').addEventListener('click', function (e) {
     initialize();
+    playerAceCheck();
     blackjack();
 });
 
 document.querySelector('#hit').addEventListener('click', function(e) {
         deal(playersHand, 1, true);
+        playerAceCheck();
         renderPlayer();
         checkPlayer();
 });
@@ -109,7 +111,7 @@ document.querySelector('.stand').addEventListener('click', function(e){
         front.setAttribute('src', `images/PNG/${imgName}`);
         dealer2.appendChild(front);
         dealer2Img.remove();
-      
+
       renderPlayer();
       renderDealer();
       checkDealer();
@@ -121,7 +123,7 @@ document.querySelector('.stand').addEventListener('click', function(e){
       checkDealer();
       dealerBust();
       checkWin();
-      points();
+      checkPush();
       let btns = document.querySelectorAll('#hit, .stand');
             btns.forEach(function(btn){
                 btn.disabled = true;
@@ -150,17 +152,19 @@ function deal(person, num, isPlayer) {
 function renderPlayer() {
         playerTotal = 0;
     for (let i = 0; i < playersHand.length; i++) {
-        playerTotal += playersHand[i].weight;
-    }
-
+            playerTotal += playersHand[i].weight;
+    } 
 };
 
 function renderDealer() {
         dealerTotal = 0
     for (let i = 0; i < dealersHand.length; i++) {
-        dealerTotal += dealersHand[i].weight; 
+        if (dealersHand[i].weight === 11 && dealerTotal > 10) {
+            dealersHand[i].weight = 1;
+        }
+            dealerTotal += dealersHand[i].weight; 
+            console.log('dealer   ' + dealerTotal)
     }
-    
 };
 
 function checkPlayer() {
@@ -206,3 +210,27 @@ function blackjack() {
         playersMessage.innerHTML = `<h2>You got a BlackJack!</h2>`;
     }
 };
+
+function checkPush() {
+    if (dealerTotal === playerTotal ) {
+        dealersMessage.innerHTML = '<h2>Push</h2>'
+        playersMessage.innerHTML = '<h2>Push</h2>'
+    }
+};
+
+function playerAceCheck(){
+    for (let i=0; i < playersHand.length; i++) {
+        if (playersHand[i].weight === 11 && playerTotal > 10) {
+            playersHand[i].weight = 1;
+        }
+        console.log(playerTotal)
+    }
+}
+
+function dealerAceCheck(){
+    for (let i=0; i < dealersHand.length; i++) {
+        if (dealersHand[i].weight === 11 && dealerTotal > 10) {
+            dealersHand[i].weight = 1;
+        }
+    }
+}
