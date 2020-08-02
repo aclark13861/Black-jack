@@ -81,6 +81,9 @@ img {
 }
 
 body {
-    background: url(../images/casino-back.jpg);
+    background: url(../images/table.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
