@@ -19,5 +19,5 @@ Fun fact my father and grandfather once won upwards of 7,000 dollars playing Bla
 
 Gameplay:
 
-![Image Description](Screenshot.png)
+![Image Description](./images/Screenshot.png)
 
