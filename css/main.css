@@ -87,3 +87,7 @@ body {
    
 }
 
+.p1, .p2{
+    text-decoration: underline;
+    margin-bottom: 0%;
+}
